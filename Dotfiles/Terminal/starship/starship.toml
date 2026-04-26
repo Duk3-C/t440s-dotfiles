@@ -1,0 +1,120 @@
+format = "$os$username$hostname$directory$git_branch$git_status$line_break$all$character"
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = '[>](bold fg:#A0A0A0)'
+error_symbol = '[>](bold fg:#5DADE2)'
+format = '$symbol '
+disabled = false
+
+[username]
+show_always = true
+style_user = 'bg:#708090'
+style_root = 'bg:#708090'
+format = '[$user ]($style)'
+disabled = false
+
+[hostname]
+ssh_only = true
+ssh_symbol = '[ssh]'
+trim_at = '.'
+style = 'bg:#708090'
+format = '[$ssh_symbol $hostname]($style)'
+disabled = false
+
+[os]
+style = 'bg:#708090'
+disabled = true
+
+[directory]
+style = 'bg:#F0F0F0 fg:#2C3E50'
+format = '[ $path ]($style)'
+truncation_length = 3
+truncation_symbol = '.../'
+
+[c]
+symbol = 'c'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = 'docker'
+style = 'bg:#A0A0A0 fg:#1C1C1C'
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = 'elixir'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = 'elm'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = 'git'
+style = 'bg:#85C1E9 fg:#1C1C1C'
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = 'bg:#85C1E9 fg:#1C1C1C'
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = 'go'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = 'hs'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = 'java'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = 'jl'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = 'node'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = 'nim'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = 'py'
+format = '[${symbol} ${pyenv_prefix} (${version} )(\($virtualenv\) )]($style)'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+
+[rlang]
+symbol = 'r'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[$symbol ($version )]($style)'
+
+[rust]
+symbol = 'rs'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = 'scala'
+style = 'bg:#5DADE2 fg:#1C1C1C'
+format = '[ $symbol ($version) ]($style)'
+
+[conda]
+symbol = 'conda'
+style = 'bg:#A0A0A0 fg:#1C1C1C'
+format = '[ $symbol $environment ]($style)'
+ignore_base = false
