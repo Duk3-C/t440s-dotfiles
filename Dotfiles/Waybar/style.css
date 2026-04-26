@@ -1,64 +1,36 @@
-/* -------------------------------------------------
-   Waybar – Light Gray Oval Pills (Plain CSS)
-   ------------------------------------------------- */
-
 * {
-    font-family: "Inter", "Font Awesome 6 Free Solid", sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    outline: none;
 }
 
 window#waybar {
     background: transparent;
-    color: #1e1e2e;
+    color: #d4d4d4;
 }
 
-/* -------------------------------------------------
-   REUSABLE PILL STYLE (copy-paste, not mixin)
-   ------------------------------------------------- */
-#clock,
-#workspaces,
-#cpu,
-#memory,
-#network\.wifi {
-    background-color: #e5e5e5;           /* light gray */
-    color: #1e1e2e;                       /* dark text */
-    border-radius: 999px;                /* oval/rounded */
-    padding: 0 14px;
-    margin: 0 4px;
-}
-
-/* -------------------------------------------------
-   LEFT: Clock – slightly wider
-   ------------------------------------------------- */
-#clock {
-    padding: 0 16px;
-}
-
-/* -------------------------------------------------
-   CENTER: Workspaces
-   ------------------------------------------------- */
-#workspaces {
-    padding: 0 12px;
+#custom-ip, #workspaces, #network, #clock {
+    background: rgba(60, 60, 60, 0.7);
+    color: #d4d4d4;
+    padding: 10px 28px;
+    border-radius: 9999px;
+    margin: 0 6px;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: #1e1e2e;
-    min-width: 20px;
+    padding: 4px 10px;
+    color: #888;
+    background: transparent;
+    border-radius: 9999px;
+    margin: 0 2px;
 }
 
 #workspaces button.active {
-    color: #89b4fa;                      /* active workspace accent */
+    color: #d4d4d4;
 }
 
-/* -------------------------------------------------
-   RIGHT: CPU, Memory, Wi-Fi
-   ------------------------------------------------- */
-#cpu,
-#memory,
-#network\.wifi {
-    padding: 0 12px;
-    min-width: 68px;                     /* align icons + % */
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
 }

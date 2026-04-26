@@ -1,54 +1,44 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
-    "spacing": 8,
-    "margin-top": 6,
-    "margin-left": 6,
-    "margin-right": 6,
+    "height": 48,
+    "spacing": 12,
 
-    // ==== LEFT ====
-    "modules-left": ["clock"],
-
-    // ==== CENTER ====
+    "modules-left": ["custom/ip"],
     "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "clock"],
 
-    // ==== RIGHT ====
-    "modules-right": ["cpu", "memory", "network#wifi"],
-
-    // -------------------------------------------------
-    // MODULE DEFINITIONS
-    // -------------------------------------------------
-    "clock": {
-        "format": "{:%H:%M}",          // 24 h only
+    "custom/ip": {
+        "exec": "ip -4 addr show | grep -oP '(?<=inet\\s)\\d+\\.\\d+\\.\\d+\\.\\d+' | head -n1",
+        "interval": 30,
+        "format": "󰩠  {}",
         "tooltip": false
     },
 
     "hyprland/workspaces": {
         "format": "{icon}",
-        "all-outputs": true,
-        "persistent-workspaces": {
-            "*": 5
-        }
+        "format-icons": {
+            "1": "󰅨", "2": "", "3": "", "4": "",
+            "5": "", "6": "󰭹", "7": "󰎚", "8": "",
+            "9": "", "10": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": { "*": [1,2,3,4,5,6,7,8,9,10] },
+        "on-click": "activate",
+        "sort-by-number": true
     },
 
-    "cpu": {
-        "format": "󰍛 {usage}%",
-        "tooltip": false,
-        "interval": 2
-    },
-
-    "memory": {
-        "format": "󰘚 {}%",
-        "tooltip": false,
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid}",
         "interval": 5
     },
 
-    "network#wifi": {
-        "interface": "wlan0",          // change if your interface is different
-        "format-wifi": "󰖩 {signalStrength}%",
-        "format-disconnected": "󰖪",
-        "tooltip": false,
-        "interval": 10
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
     }
 }
