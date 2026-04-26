@@ -4,20 +4,17 @@ window {
     border-radius: 12px;
     background: rgba(45, 45, 45, 0.95);
     font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
 }
 
 #input {
-    margin: 12px;
-    padding: 12px 16px;
+    margin: 0px;
+    padding: 0px;
     border: none;
-    border-radius: 8px;
-    background: rgba(70, 70, 70, 0.8);
-    color: #d4d4d4;
-    caret-color: #d4d4d4;
-}
-
-#input:focus {
-    background: rgba(80, 80, 80, 0.9);
+    background: transparent;
+    color: transparent;
+    min-height: 0px;
+    min-width: 0px;
 }
 
 #entry:selected {
@@ -26,23 +23,16 @@ window {
 }
 
 #entry {
-    padding: 8px 12px;
-    border-radius: 6px;
-    background: transparent;
+    padding: 20px 28px;
+    border-radius: 8px;
+    background: rgba(60, 60, 60, 0.6);
     border: 2px solid transparent;
+    margin: 6px;
 }
 
 #entry:hover {
-    background: transparent;
+    background: rgba(70, 70, 70, 0.8);
     border: 2px solid #505050;
-}
-
-#text {
-    color: #c0c0c0;
-}
-
-#text:selected {
-    color: #ffffff;
 }
 
 #text {
@@ -53,11 +43,6 @@ window {
 #text:selected {
     color: #ffffff;
     font-weight: 700;
-}
-
-#entry:hover #image,
-#entry:selected #image {
-    opacity: 1;
 }
 
 #inner-box {
