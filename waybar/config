@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "top",
+    "format-separator": " | ",
+    "modules-left": ["network", "clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["battery#bat0", "battery#bat1", "network#wifi", "custom/name"],
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": "{ipaddr} | ",
+        "format-ethernet": "{ipaddr} | ",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+    "network#wifi": {
+        "interface": "wlan0",
+        "format-wifi": "󰤨 {signalStrength}%",
+        "format-disconnected": "󰤭 0%"
+    },
+    "battery#bat0": {
+        "bat": "BAT0",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%"
+    },
+    "battery#bat1": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%"
+    },
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "custom/name": {
+        "format": "Duk3-C"
+    }
+}

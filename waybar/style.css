@@ -1,0 +1,33 @@
+* {
+    font-family: "3270 Nerd Font";
+    font-size: 22px;
+    color: #cdd6f4;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.5);
+    opacity: 1;
+}
+
+#workspaces button {
+    color: #585b70;
+    padding: 0 8px;
+}
+
+#workspaces button.active {
+    color: #cdd6f4;
+    font-weight: bold;
+    background-color: #313244;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+#battery,
+#network,
+#network#wifi,
+#custom-name {
+    color: #a6adc8;
+    padding: 0 8px;
+}

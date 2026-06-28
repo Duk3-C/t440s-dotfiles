@@ -1,9 +1,0 @@
-[opener]
-pdf = [{ run = "zathura %s", orphan = true }]
-edit = [{ run = "nvim %s", block = true }]
-
-[open]
-rules = [
-  { url = "*.pdf", use = "pdf" },
-  { mime = "text/*", use = "edit" }
-]

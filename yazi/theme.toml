@@ -1,0 +1,32 @@
+[app]
+overall = { bg = "#1e1e2e" }
+
+[mgr]
+cwd = { fg = "#cc66cc" }
+border_style = { fg = "#cc66cc" }
+
+[mode]
+normal_main = { fg = "#1e1e2e", bg = "#cc66cc", bold = true }
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#cc66cc" },
+  { url = "*", fg = "#cc66cc" },
+  { url = "*/", fg = "#cc66cc" },
+]
+
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "#cc66cc" },
+  { name = "Desktop", text = "", fg = "#cc66cc" },
+  { name = "Documents", text = "", fg = "#cc66cc" },
+  { name = "Downloads", text = "", fg = "#cc66cc" },
+  { name = "Music", text = "", fg = "#cc66cc" },
+  { name = "Pictures", text = "", fg = "#cc66cc" },
+  { name = "Videos", text = "", fg = "#cc66cc" },
+]
+conds = [
+  { if = "dir", text = "", fg = "#cc66cc" },
+  { if = "exec", text = "", fg = "#cc66cc" },
+  { if = "!dir", text = "", fg = "#cc66cc" },
+]

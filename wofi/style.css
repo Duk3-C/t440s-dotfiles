@@ -1,0 +1,36 @@
+* {
+    border-color: #ffffff !important;
+}
+
+window {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: "3270 Nerd Font", monospace;
+    font-size: 22px;
+}
+
+#window {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+}
+
+#input {
+    background-color: #000000 !important;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 8px;
+}
+
+#entry:selected {
+    background-color: #333333;
+}
+
+#text {
+    color: #ffffff;
+}
+
+#entry {
+    padding: 8px 12px;
+    border: none;
+}

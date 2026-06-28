@@ -1,0 +1,13 @@
+width=400
+height=300
+location=center
+prompt=Recent apps...
+matching=fuzzy
+insensitive=true
+allow_markup=true
+hide_scroll=true
+fork=true
+normal_window=true
+gtk_dark=true
+dmenu=true
+lines=5
